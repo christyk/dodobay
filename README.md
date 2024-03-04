@@ -1,4 +1,4 @@
-# dodobay API Endpoints
+# DODOBAY Django REST Framework API Endpoints
 
 # User Registration and Authentication
 /api/auth/register
@@ -41,6 +41,16 @@
 
 /api/item
     get: all
+
+/api/item?{filter options separated by &}
+    get: all
+    options: 
+        search={space separated search words}
+        category={category name}
+        color_1={color name}
+        color_2={color name}
+        source={sourcename}
+        season_event={season/event name}
 
 /api/item/{itemId}
     get: all
