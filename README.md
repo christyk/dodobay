@@ -1,6 +1,7 @@
-# DODOBAY Django REST Framework API Endpoints
+## DODOBAY Django REST Framework API Endpoints
 
-# User Registration and Authentication
+## User Registration and Authentication
+```
 /api/auth/register
     post: all
 
@@ -12,8 +13,9 @@
 
 /api/auth/logout
     post: authenticated user
-
-# User Data
+```
+## User Data
+```
 /api/user
     get: self, superuser: all fields
     get: others including anonymous user: limited fields
@@ -31,8 +33,9 @@
 
 /api/user/{userId}/offer
     get: self, superuser
-
-# Item Data
+```
+## Item Data
+```
 /api/category
     get: all
 
@@ -63,8 +66,9 @@
 
 /api/item-detail/{itemId}
     get: all
-
-# Listing
+```
+## Listing
+```
 /api/listing
     get: all
     post: authenticated user
@@ -85,8 +89,9 @@
 
 /api/listing/{listingId}/cancel
     post: listing owner
-
-# Listing Comment
+```
+## Listing Comment
+```
 /api/listing/{listingId}/comment
     get: all
     post: authenticated user
@@ -95,8 +100,9 @@
     get: all
     patch: comment owner
     delete: comment owner, superuser
-
-# Listing Offer
+```
+## Listing Offer
+```
 /api/listing/{listingId}/offer
     get: own, listing user
     post: authenticated user
@@ -117,3 +123,4 @@
 
 /api/listing/{listingId}/offer/{offerId}/cancel
     post: offer owner
+```
